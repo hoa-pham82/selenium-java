@@ -8,7 +8,6 @@ import java.time.Duration;
 public class Test {
     public static void main(String[] args) {
         ChromeOptions options = new ChromeOptions();
-//        options.setBrowserVersion("117");
         String driverPath = SeleniumManager.getInstance().getDriverPath(options, false ).driverPath;
         WebDriver driver = new ChromeDriver(options);
         driver.get("https://github.com");
