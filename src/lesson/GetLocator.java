@@ -12,7 +12,15 @@ public class GetLocator {
 
 
         // Get element by ID
-        WebElement search = driver.findElement(By.id("APjFqb"));
-        search.sendKeys("how to config docker");
+//        WebElement search = driver.findElement(By.id("APjFqb"));
+//        search.sendKeys("how to config docker");
+
+         // Get element by css selector
+//        WebElement search = driver.findElement(By.cssSelector(".gLFyf"));
+//        search.sendKeys("how to config docker file");
+
+         // Get element by xpath
+        WebElement search = driver.findElement(By.xpath("//*[@class='gLFyf']"));
+        search.sendKeys("how to config docker file");
     }
 }
