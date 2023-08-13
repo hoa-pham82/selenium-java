@@ -5,12 +5,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class GetLocator {
+public class GetLocatorByXPath {
 
   public static void main(String[] args) {
     WebDriver driver = new ChromeDriver();
     driver.get("https://google.com");
-    
+
     // Get element by ID
 //        WebElement search = driver.findElement(By.id("APjFqb"));
 //        search.sendKeys("how to config docker");
@@ -20,5 +20,7 @@ public class GetLocator {
     // Get element by xpath
     WebElement search = driver.findElement(By.xpath("//*[@class='gLFyf']"));
     search.sendKeys("how to config docker file");
+
+    driver.quit();
   }
 }
