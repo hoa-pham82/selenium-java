@@ -25,6 +25,8 @@ public class DropdownHandler {
     } else {
       System.out.println("Test failed!!!!!");
     }
+
+    WebDriverManager.teardown();
   }
 
 }

@@ -9,7 +9,7 @@ public class Login {
   public static void handleLogin() throws InterruptedException {
 
     WebDriver driver = WebDriverManager.getDriver();
-    driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+    WebDriverManager.setup();
 
     Thread.sleep(2000);
 

@@ -14,4 +14,12 @@ public class WebDriverManager {
     return driver;
   }
 
+  public static void setup() {
+    driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+  }
+
+  public static void teardown() {
+    driver.quit();
+  }
+
 }
