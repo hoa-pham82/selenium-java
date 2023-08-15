@@ -10,10 +10,11 @@ public class Checkbox {
     WebDriver driver = WebDriverManager.getDriver();
     WebElement firstCheckbox = driver.findElement(
         By.xpath("//input[@value='0']/following-sibling::span"));
+    
     if (!firstCheckbox.isSelected()) {
       firstCheckbox.click();
-
     }
+
     System.out.println("The first checkbox is selected");
   }
 
