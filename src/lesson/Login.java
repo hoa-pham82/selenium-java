@@ -9,7 +9,6 @@ public class Login {
   public static void handleLogin() throws InterruptedException {
 
     WebDriver driver = WebDriverManager.getDriver();
-    WebDriverManager.setup();
 
     Thread.sleep(2000);
 
