@@ -13,9 +13,9 @@ public class Base {
     driver.findElement(By.xpath(String.format("//*[text()='%s ']", tabBar))).click();
     driver.findElement(By.xpath(String.format("//a[text()='%s']", option))).click();
 
-    sleep(2000);
+    sleep(4000);
 
-    if (driver.findElement(By.xpath(String.format("//h6[text()='%s']", option))).isDisplayed()) {
+    if (driver.findElement(By.xpath(String.format("//*[text()='%s']", option))).isDisplayed()) {
       System.out.println(option + " is selected!!!");
     } else {
       System.out.println("Something wrong with select tab bar option" + option);
