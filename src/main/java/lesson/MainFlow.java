@@ -1,18 +1,23 @@
 package lesson;
 
+import org.testng.annotations.Test;
+
 public class MainFlow {
 
-  public static void main(String[] args) throws InterruptedException {
-    // Setup
+  @Test
+  void test() throws InterruptedException {
+//    Setup
     WebDriverManager.setup();
     Login.handleLogin();
 
-//     Test
+//    Test
 //    DropdownHandler.handleDropdown();
 //    Checkbox.handleCheckbox();
     RadioButton.handleRadioButton();
 
-    // Teardown
+//    teardown
     WebDriverManager.teardown();
   }
+
 }
+
