@@ -4,6 +4,7 @@ import static java.lang.Thread.*;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 
 public class Base {
 
@@ -15,11 +16,10 @@ public class Base {
 
     sleep(4000);
 
-    if (driver.findElement(By.xpath(String.format("//*[text()='%s']", option))).isDisplayed()) {
-      System.out.println(option + " is selected!!!");
-    } else {
-      System.out.println("Something wrong with select tab bar option" + option);
-    }
+    Assert.assertTrue(
+        driver.findElement(By.xpath(String.format("//*[text()='%s']", option))).isDisplayed());
+    System.out.println(option + " is selected!!!");
+
   }
 
   public static void selectFromSideBar(String option) throws InterruptedException {

@@ -3,19 +3,23 @@ package lesson;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 
 public class Checkbox {
 
   public static void handleCheckbox() {
     WebDriver driver = WebDriverManager.getDriver();
     WebElement firstCheckbox = driver.findElement(
-        By.xpath("//input[@value='0']/following-sibling::span"));
-    
+        By.xpath("//input[@value='0']"));
+
     if (!firstCheckbox.isSelected()) {
-      firstCheckbox.click();
+      Actions act = new Actions(driver);
+      act.moveToElement(firstCheckbox).click().build().perform();
     }
 
-    System.out.println("The first checkbox is selected");
-  }
+    Assert.assertTrue(firstCheckbox.isSelected(), "Checkbox is not checked as expected!!");
+    System.out.println("The first option is checked as: " + firstCheckbox.isSelected());
 
+  }
 }

@@ -2,6 +2,7 @@ package lesson;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 
 public class Login {
 
@@ -21,12 +22,8 @@ public class Login {
     boolean dashboard = driver.findElement(By.xpath("//h6[text()[contains(., 'Dashboard')]]"))
         .isDisplayed();
 
-    if (dashboard) {
-      System.out.println("Login to dashboard successfully");
-    } else {
-      System.out.println("Login failed!!!!");
-    }
+    Assert.assertTrue(dashboard, "Login failed!!!!");
+    System.out.println("Login to dashboard successfully");
 
   }
-
 }
