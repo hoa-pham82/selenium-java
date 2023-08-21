@@ -7,6 +7,9 @@ out/
 # maven #
 /target/
 
+#testNG#
+/test-output/
+
 ### Eclipse ###
 .apt_generated
 .classpath
