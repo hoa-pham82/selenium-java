@@ -6,6 +6,9 @@ I created this repository to learn and practice Selenium version 4.x with Java v
 
 Other tool/tech stack will be used: Maven, TestNG, Circle CI.
 
-And I apply Singleton design pattern to structure the test script. 
+And I apply Singleton design pattern to structure the test script.
+
+The website that I have used to test:
+https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
 
 
