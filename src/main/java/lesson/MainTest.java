@@ -8,7 +8,7 @@ public class MainTest {
 
   @BeforeClass
   public void setUp() throws InterruptedException {
-    WebDriverManager.setup();
+    WebDriverManager.setup("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
     Login.handleLogin();
   }
 

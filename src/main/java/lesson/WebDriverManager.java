@@ -14,9 +14,9 @@ public class WebDriverManager {
     return driver;
   }
 
-  public static void setup() {
+  public static void setup(String url) {
     WebDriver driver = WebDriverManager.getDriver();
-    driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+    driver.get(url);
     driver.manage().window().maximize();
   }
 
