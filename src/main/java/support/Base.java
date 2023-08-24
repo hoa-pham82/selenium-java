@@ -1,4 +1,4 @@
-package lesson;
+package support;
 
 import static java.lang.Thread.*;
 

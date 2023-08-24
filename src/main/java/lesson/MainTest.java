@@ -3,6 +3,8 @@ package lesson;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import support.Login;
+import support.WebDriverManager;
 
 public class MainTest {
 
@@ -19,7 +21,7 @@ public class MainTest {
 
   @Test
   void handleDropdown() throws InterruptedException {
-    DropdownHandler.handleDropdown();
+    Dropdown.handleDropdown();
     Checkbox.handleCheckbox();
   }
 
