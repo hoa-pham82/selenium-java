@@ -11,7 +11,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import support.WebDriverManager;
 
-public class popUpWindow {
+public class PopUpWindow {
 
   @BeforeClass
   void setUp() {
