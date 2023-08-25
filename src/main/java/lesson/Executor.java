@@ -13,8 +13,11 @@ public class Executor {
     JavascriptExecutor js = (JavascriptExecutor) driver;
     driver.get("https://www.google.com.vn/");
 
+    String text = "how to do this do that?";
+
     js.executeScript(
-        "document.querySelector(\"[jsname='yZiJbe']\").value='how to do this do that?';");
+        "document.querySelector(\"[jsname='yZiJbe']\").setAttribute('value', 'argument[0]');",
+        text);
     driver.quit();
   }
 
