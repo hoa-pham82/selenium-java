@@ -2,9 +2,11 @@ package lesson;
 
 import java.time.Duration;
 import org.openqa.selenium.By;
+import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -49,6 +51,24 @@ public class Wait {
 
     // Assert
     Assert.assertTrue(driver.findElement(By.id("box0")).isDisplayed());
+  }
+
+  @Test
+  public void fluentWait() {
+    WebDriver driver = WebDriverManager.getDriver();
+    org.openqa.selenium.support.ui.Wait<WebDriver> wait = new FluentWait<>(driver).withTimeout(
+        Duration.ofSeconds(5)).pollingEvery(Duration.ofMillis(200)).ignoring(
+        ElementNotInteractableException.class);
+
+    WebElement revealed = driver.findElement(By.id("revealed"));
+    driver.findElement(By.id("reveal")).click();
+    wait.until(d -> {
+      revealed.sendKeys("Displayed");
+      return true;
+    });
+
+    Assert.assertEquals(revealed.getAttribute("value"), "Displayed");
+
   }
 
 
